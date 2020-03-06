@@ -279,15 +279,15 @@ def Deserialize(serialized_string):
   """
   return u'%s' % MakeISC(pickle.loads(str(serialized_string)))
 
-  def AddZone(json_zone, isc_dict):
-    """Add zone to named config
-    Inputs:
-        json_zone: Zone definition in json format
-    Outputs:
-        isc dict with added value
-    """
-    isc_dict.update(json_zone)
-    return isc_dict
+def AddZone(json_zone, isc_dict):
+  """Add zone to named config
+  Inputs:
+      json_zone: Zone definition in json format
+  Outputs:
+      isc dict with added value
+  """
+  isc_dict.update(json_zone)
+  return isc_dict
 
 def ContentToWrite(isc_dict, num_tab, content, tokens):
     """
